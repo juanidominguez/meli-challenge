@@ -195,13 +195,41 @@ cython_debug/
 .pypirc
 
 # Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
+#  Cursor is an AI-powered code editor. These files contain workspace settings, rules,
+#  and other cursor-specific configurations that shouldn't be shared in the repository.
 #  refer to https://docs.cursor.com/context/ignore-files
+.cursor/
+.cursorrules
 .cursorignore
+.cursor-tutor/
 .cursorindexingignore
 
 # Marimo
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Custom rules for this project
+# Ignore text files
+*.txt
+# Exception: Allow essential production files
+!requirements.txt
+
+# Ignore JSON files
+*.json
+*.jsonlines
+# Exception: Allow trained models
+!xgboost_optimized.json
+
+# Ignore batch files
+*.bat
+
+# Ignore Word documents
+*.docx
+# Exception: Allow project specification document
+!Opportunities_MeLi\ -\ CodeExercise\ DS_ML.docx
+
+# Production files that should be included in repository
+# (These files are essential for model deployment and reproducibility)
+!feature_engineering_pipeline.pkl
+!model_comparison_results.csv
