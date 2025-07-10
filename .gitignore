@@ -228,6 +228,8 @@ __marimo__/
 *.docx
 # Exception: Allow project specification document
 !Opportunities_MeLi\ -\ CodeExercise\ DS_ML.docx
+# Exception: Allow project explanation document
+!Documento_Explicatorio_del_Challenge.docx
 
 # Production files that should be included in repository
 # (These files are essential for model deployment and reproducibility)
